@@ -1,0 +1,51 @@
+
+
+<div class="row" >
+	<div class="col-md-4 comfort-col">
+		<h4 class="pb-3">Technologies</h4>
+		<hr>
+		<div >
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Experience With Column -->
+	<div class="col-md-4 comfort-col">
+		<h6 class="text-uppercase">Day-To-Day Comfort</h6>
+		<ul>
+			<li *ngFor="let skillset of skillset">{{ skillset.fields.skillset}}</li>
+		</ul>
+	</div>
+
+	<!-- Experience With Column -->
+	<div class="col-md-4 experience-col">
+	    <h6 class="text-uppercase">Experience with</h6>
+	    <ul>
+	        <li> </li>
+	    </ul>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-4">
+	    <h4 class="pb-3">Work Experience</h4>
+	</div>
+	<div class="col-md-8" >
+		<div class="d-flex flex-wrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap" *ngFor="let resume of resumes">
+
+			<div class="p-2">
+
+				<h5>{{ resume.fields.employerName}}</h5>
+				<h6>{{ resume.fields.jobTitle }}</h6>
+				<p><i>{{ resume.fields.fromDate }} - {{ resume.fields.toDate }}</i></p>
+				<div>{{ resume.fields.description }}</div>
+				<br>
+
+				<!-- <button (click)="goToSkillsPage()" class="btn btn-info">Employer Details</button> -->
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+
+
